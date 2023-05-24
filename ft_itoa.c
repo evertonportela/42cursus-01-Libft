@@ -29,6 +29,14 @@ static size_t	count_digit(size_t number)
 	return (digit);
 }
 
+static int	flag_negative(long int number)
+{
+	if (number < 0)
+		return (1);
+	else
+		return (0);
+}
+
 char	*ft_itoa(int n)
 {
 	unsigned int	len_digits;
@@ -36,15 +44,14 @@ char	*ft_itoa(int n)
 	long int		number;
 	char			*string_digit;
 
-	is_negative = 0;
 	number = n;
-	if (number < 0)
-	{
+	is_negative = flag_negative(number);
+	if (is_negative == 1)
 		number = number * (-1);
-		is_negative = 1;
-	}
 	len_digits = count_digit(number);
 	string_digit = (char *) malloc((len_digits + is_negative) + 1);
+	if (!string_digit)
+		return (NULL);
 	string_digit[len_digits + is_negative] = '\0';
 	while (len_digits > 0)
 	{

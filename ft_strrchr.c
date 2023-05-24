@@ -21,6 +21,8 @@ char	*ft_strrchr(const char *s, int c)
 	index = ft_strlen(s);
 	s = (s + index);
 	c = (unsigned char) c;
+	if (s == NULL)
+		return ((char *)s);
 	while (*s != *initial && c != *s)
 	{
 		s--;

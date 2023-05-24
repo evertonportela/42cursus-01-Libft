@@ -17,11 +17,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t		foot;
 	const char	*str_empty;
 
+	if (!s1 || !set)
+		return (NULL);
 	foot = ft_strlen(s1);
 	str_empty = "";
-	if (!s1 || !set)
-		return (0);
-	else if (s1 == str_empty || set == str_empty)
+	if (s1 == str_empty || set == str_empty)
 	{
 		return (ft_substr(s1, 0, foot + 1));
 	}
