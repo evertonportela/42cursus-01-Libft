@@ -6,7 +6,7 @@
 #    By: evportel <evportel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/05 10:41:40 by evportel          #+#    #+#              #
-#    Updated: 2023/05/24 10:55:44 by evportel         ###   ########.fr        #
+#    Updated: 2023/05/24 10:56:52 by evportel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,3 @@ fclean:			clean
 	$(RM) $(NAME)
 
 re: fclean all
-
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
-	gcc -nostartfiles -shared -o libft.so $(OBJ)
