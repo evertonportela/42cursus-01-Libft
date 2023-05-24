@@ -22,8 +22,6 @@ typedef struct s_list
 	struct s_list	*next;	
 }					t_list;
 
-
-/* Mandatory Functions */
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -58,8 +56,6 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
-
-/* Mandatory Functions */
 t_list	*ft_lstnew(void *content);
 
 #endif
