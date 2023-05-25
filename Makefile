@@ -6,7 +6,7 @@
 #    By: evportel <evportel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/05 10:41:40 by evportel          #+#    #+#              #
-#    Updated: 2023/05/24 21:26:03 by evportel         ###   ########.fr        #
+#    Updated: 2023/05/24 21:29:23 by evportel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,8 +38,7 @@ $(NAME):		$(OBJECTS)
 				ar -rcs $(NAME) $(OBJECTS)
 
 %.o:			%.c
-				$(CC) $(FLAGS) -I libft.h -c $< -o $@
-#				$(CC) $(FLAGS) -I ./libft.h -c $< -o $@
+				$(CC) $(FLAGS) -I ./libft.h -c $< -o $@
 
 # MAKE BONUS
 bonus:			$(OBJECTS_BONUS)
