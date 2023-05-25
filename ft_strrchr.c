@@ -6,7 +6,7 @@
 /*   By: evportel <evportel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 10:35:33 by evportel          #+#    #+#             */
-/*   Updated: 2023/05/11 16:12:59 by evportel         ###   ########.fr       */
+/*   Updated: 2023/05/24 21:22:39 by evportel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,17 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int			index;
-	const char	*initial;
+	char	*matched;
 
-	initial = s;
-	index = ft_strlen(s);
-	s = (s + index);
-	c = (unsigned char) c;
-	if (s == NULL)
-		return ((char *)s);
-	while (*s != *initial && c != *s)
+	c = (unsigned char)c;
+	matched = 0;
+	while (*s)
 	{
-		s--;
+		if (*s == c)
+			matched = (char *)s;
+		s++;
 	}
-	if (c == *s)
+	if (c == '\0')
 		return ((char *)s);
-	return (NULL);
+	return (matched);
 }
