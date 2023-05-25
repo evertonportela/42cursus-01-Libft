@@ -42,25 +42,3 @@ jobs:
         run: |
           sudo apt-get update
           make
-
-
-
-
-name: Meu Workflow
-
-on:
-  push:
-    branches: [ main ]
-
-jobs:
-  build:
-    runs-on: ubuntu-20.04
-    steps:
-      - name: Checkout do repositório
-        uses: actions/checkout@v2
-      - name: Configuração do ambiente
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y <pacotes-necessarios>
-      - name: Testar o build
-        run: <comandos-necessarios-para-testar-o-build>
