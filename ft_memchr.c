@@ -6,7 +6,7 @@
 /*   By: evportel <evportel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 15:04:10 by evportel          #+#    #+#             */
-/*   Updated: 2023/05/24 20:50:49 by evportel         ###   ########.fr       */
+/*   Updated: 2023/05/26 17:03:59 by evportel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,14 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	index;
-
-	index = 0;
-	while (index < n)
+	while (n > 0)
 	{
-		if (((char *)s)[index] == (char)c)
+		if (*(unsigned char *)s == (unsigned char)c)
 		{
-			return ((void *)s + index);
+			return ((unsigned char *)s);
 		}
-		index++;
+		s++;
+		n--;
 	}
-	return (NULL);
+	return (0);
 }
