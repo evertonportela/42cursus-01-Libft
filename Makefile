@@ -6,7 +6,7 @@
 #    By: evportel <evportel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/05 10:41:40 by evportel          #+#    #+#              #
-#    Updated: 2023/05/27 21:08:50 by evportel         ###   ########.fr        #
+#    Updated: 2023/05/28 15:01:29 by evportel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SOURCES			= ft_isalpha.c	ft_isdigit.c	ft_isalnum.c	ft_isascii.c\
 
 OBJECTS			= $(SOURCES:%.c=%.o)
 
-SOURCES_BONUS	= ft_lstnew_bonus.c
+SOURCES_BONUS	= ft_lstnew_bonus.c		ft_lstadd_front_bonus.c
 
 OBJECTS_BONUS	= $(SOURCES_BONUS:%.c=%.o)
 
