@@ -6,7 +6,7 @@
 /*   By: evportel <evportel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 11:12:04 by evportel          #+#    #+#             */
-/*   Updated: 2023/05/15 14:52:56 by evportel         ###   ########.fr       */
+/*   Updated: 2023/05/27 19:56:00 by evportel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ static size_t	count_digit(size_t number)
 
 	if (number == 0)
 		return (1);
-	if (number < 0)
-		number *= -1;
 	digit = 0;
 	while (number > 0)
 	{
