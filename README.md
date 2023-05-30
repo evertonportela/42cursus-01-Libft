@@ -32,3 +32,17 @@ Makefile is where you will create a file to compile your projects. Remember how 
 - [`ft_isprint`](ft_isprint.c)	- checks for any printable character.
 - [`ft_toupper`](ft_toupper.c)	- convert char to uppercase.
 - [`ft_tolower`](ft_tolower.c)	- convert char to lowercase.
+
+
+Compilation command:
+``` make
+$> gcc hello_libft.c -o hello_libft -L ./Libft-42sp -lft
+```
+
+Expected Output:
+``` shell
+$> ./hello_libft
+Hello world!
+Powered by Libft.
+$>
+```
