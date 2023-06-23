@@ -38,3 +38,5 @@ Compilation command:
 ``` sh
 make
 ```
+
+[![flow-with-norm-build-tests](https://github.com/evertonportela/42cursus-01-Libft/actions/workflows/flow-with-norm-build-tests.yml/badge.svg)](https://github.com/evertonportela/42cursus-01-Libft/actions/workflows/flow-with-norm-build-tests.yml)
