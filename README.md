@@ -8,7 +8,8 @@
 <p>
     Your first own library - Summary: The aim of this project is to code a C library regrouping usual functions that you’ll be allowed to use in all your other projects
 </p>
-<p>A programação em C pode ser muito tediosa quando não se tem acesso a essas funções padrão altamente úteis. Este projeto faz com que você reserve um tempo para reescrever essas funções, entendê-las e aprender a usá-las. Esta biblioteca irá ajudá-lo em todos os seus projetos C futuros.<br>Através deste projeto, também damos a você a oportunidade de expandir a lista de funções com as suas. Aproveite o tempo para expandir sua liberdade ao longo do ano.
+<p>
+    Programming in C can be very tedious when you don't have access to these highly useful standard functions. This project makes you take the time to rewrite these functions, understand them, and learn how to use them. This library will help you in all your future C projects.<br>Through this project, we also give you the opportunity to expand the list of functions with your own. Take the time to expand your freedom throughout the year.
 </p>
 <strong>Developed during the step cadet, May 2023 - The 42 Cursus.</strong><br>
 
@@ -33,16 +34,7 @@ Makefile is where you will create a file to compile your projects. Remember how 
 - [`ft_toupper`](ft_toupper.c)	- convert char to uppercase.
 - [`ft_tolower`](ft_tolower.c)	- convert char to lowercase.
 
-
 Compilation command:
-``` make
-$> gcc hello_libft.c -o hello_libft -L ./Libft-42sp -lft
-```
-
-Expected Output:
-``` shell
-$> ./hello_libft
-Hello world!
-Powered by Libft.
-$>
+``` sh
+make
 ```
