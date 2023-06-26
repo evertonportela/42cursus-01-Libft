@@ -89,7 +89,16 @@ jobs:
           export TERM=xterm-256color
       
       - name: Bonus List New
-        run: make ft_lstnew
+        run: make lstnew
 
       - name: Bonus List Add Front
-        run: make ft_lstadd_front
+        run: make lstadd_front
+
+      - name: Bonus List Size
+        run: make lstsize
+
+      - name: Bonus List Last
+        run: make lstlast
+
+      - name: Bonus List Add Back
+        run: make lstadd_back
