@@ -8,7 +8,7 @@ on:
 jobs:
   norminette:
     name: norminette
-    runs-on: ubuntu-20.04.5
+    runs-on: ubuntu-20.04
     defaults:
       run:
         working-directory: .
@@ -32,7 +32,7 @@ jobs:
   build:
     name: build
     needs: norminette
-    runs-on: ubuntu-20.04.5
+    runs-on: ubuntu-20.04
     defaults:
       run:
         working-directory: .
@@ -48,7 +48,7 @@ jobs:
   test01:
     name: Test Tripouille - Mandatory
     needs: build
-    runs-on: ubuntu-20.04.5
+    runs-on: ubuntu-20.04
     defaults:
       run:
         working-directory: .
@@ -70,7 +70,7 @@ jobs:
   test02:
     name: Test Tripouille - Bonus
     needs: test01
-    runs-on: ubuntu-20.04.5
+    runs-on: ubuntu-20.04
     defaults:
       run:
         working-directory: .
