@@ -8,7 +8,7 @@ on:
 jobs:
   norminette:
     name: norminette
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-20.04.5
     defaults:
       run:
         working-directory: .
@@ -32,20 +32,23 @@ jobs:
   build:
     name: build
     needs: norminette
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-20.04.5
     defaults:
       run:
         working-directory: .
     steps:
       - uses: actions/checkout@v2
       
-      - name: make
+      - name: Make Mandatory
         run: make
+      
+      - name: Make Bonus
+        run: make bonus
   
   test01:
     name: Test Tripouille - Mandatory
     needs: build
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-20.04.5
     defaults:
       run:
         working-directory: .
@@ -67,7 +70,7 @@ jobs:
   test02:
     name: Test Tripouille - Bonus
     needs: test01
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-20.04.5
     defaults:
       run:
         working-directory: .
