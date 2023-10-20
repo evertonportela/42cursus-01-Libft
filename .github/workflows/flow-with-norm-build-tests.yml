@@ -3,7 +3,9 @@ name: flow-with-norm-build-tests
 on:
   push:
       branches:
-        - main
+        - master
+  pull_request:
+    branches: [ "master" ]
 
 jobs:
   norminette:
@@ -14,7 +16,7 @@ jobs:
         working-directory: .
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: setup python
         uses: actions/setup-python@v2
@@ -37,7 +39,7 @@ jobs:
       run:
         working-directory: .
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       
       - name: Make Mandatory
         run: make
@@ -68,7 +70,9 @@ jobs:
           make m
       
       - name: Bonus List New
-        run: make lstnew
+        run: |
+          export TERM=xterm-256color
+          make lstnew
 
       - name: Bonus List Add Front
         run: make lstadd_front
